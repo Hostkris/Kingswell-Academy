@@ -1,0 +1,278 @@
+:root {
+  --navy: #101827;
+  --navy-2: #172238;
+  --gold: #c9a44c;
+  --gold-soft: #f7e8b4;
+  --cream: #f7f2e8;
+  --white: #ffffff;
+  --ink: #1d2433;
+  --muted: #5d6678;
+  --line: rgba(16, 24, 39, 0.14);
+  --danger: #8a2f2f;
+  --success: #2f7042;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: linear-gradient(180deg, var(--cream), #fff);
+  color: var(--ink);
+}
+
+.site-header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 28px clamp(18px, 4vw, 48px);
+  border-bottom: 4px solid var(--gold);
+}
+
+.site-header h1,
+.hero-card h1,
+.assessment-card h1,
+.lesson-view h1,
+.results-card h1 {
+  margin: 0;
+  letter-spacing: -0.03em;
+}
+
+.eyebrow {
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 22px;
+  padding: 24px clamp(16px, 4vw, 48px);
+  align-items: start;
+}
+
+.main-app,
+.progress-panel,
+.hero-card,
+.level-card,
+.unit-card,
+.lesson-card,
+.assessment-card,
+.lesson-view,
+.results-card,
+.panel,
+.question-card {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: 0 18px 50px rgba(16, 24, 39, 0.08);
+}
+
+.main-app {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
+.progress-panel {
+  position: sticky;
+  top: 18px;
+  padding: 20px;
+}
+
+.progress-panel h2 { margin-top: 0; }
+
+.hero-card,
+.assessment-card,
+.lesson-view,
+.results-card {
+  padding: clamp(22px, 4vw, 36px);
+}
+
+.hero-card.compact { margin-bottom: 20px; }
+
+.hero-card p,
+.level-card p,
+.lesson-card p,
+.panel p,
+.assessment-card p,
+.results-card p,
+.progress-panel p {
+  line-height: 1.6;
+}
+
+.hero-actions,
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.level-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.level-card,
+.unit-card,
+.lesson-card,
+.panel,
+.question-card {
+  padding: 20px;
+}
+
+.level-topline {
+  color: var(--gold);
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.unit-list {
+  display: grid;
+  gap: 18px;
+}
+
+.lesson-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+button {
+  border: 0;
+  border-radius: 999px;
+  padding: 11px 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 150ms ease, box-shadow 150ms ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(16, 24, 39, 0.14);
+}
+
+.primary {
+  background: var(--gold);
+  color: var(--navy);
+}
+
+.secondary {
+  background: var(--navy);
+  color: var(--white);
+}
+
+.link-button {
+  background: transparent;
+  color: var(--navy);
+  padding-left: 0;
+  box-shadow: none !important;
+}
+
+.vocab-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.vocab-list span {
+  background: var(--gold-soft);
+  border: 1px solid rgba(201, 164, 76, 0.45);
+  padding: 8px 10px;
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+.answer-box {
+  background: var(--cream);
+  border-left: 4px solid var(--gold);
+  padding: 12px;
+  border-radius: 10px;
+}
+
+.question-card {
+  margin: 16px 0;
+}
+
+.question-card legend {
+  font-weight: 800;
+  padding: 0 8px;
+}
+
+.choices {
+  display: grid;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.choice {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 12px;
+  background: #fff;
+  cursor: pointer;
+}
+
+input[type="text"], input:not([type]) {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 12px 14px;
+  font: inherit;
+}
+
+.score-badge {
+  display: inline-grid;
+  place-items: center;
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+  background: var(--navy);
+  color: var(--gold);
+  border: 4px solid var(--gold);
+  font-size: 2rem;
+  font-weight: 900;
+  margin: 16px 0;
+}
+
+.explanation-item {
+  border-left: 5px solid var(--line);
+  background: #fff;
+  padding: 14px;
+  margin: 12px 0;
+  border-radius: 12px;
+}
+
+.explanation-item.correct { border-left-color: var(--success); }
+.explanation-item.incorrect { border-left-color: var(--danger); }
+
+.site-footer {
+  padding: 24px clamp(16px, 4vw, 48px);
+  color: var(--muted);
+}
+
+@media (max-width: 980px) {
+  .layout { grid-template-columns: 1fr; }
+  .progress-panel { position: static; }
+  .level-grid, .lesson-list { grid-template-columns: 1fr; }
+}
+
+
+/* Kingswell shared branding add-on */
+.kwa-return-link{display:inline-flex;align-items:center;gap:.4rem;margin:14px 16px 0;color:#0d2344;text-decoration:none;font-weight:800;background:rgba(255,255,255,.86);border:1px solid rgba(13,35,68,.12);padding:.65rem .95rem;border-radius:999px;box-shadow:0 8px 20px rgba(16,24,39,.08)}
+.kwa-return-link:hover{transform:translateY(-1px)}
+.kwa-brand-banner,.kwa-mini-brand{display:flex;align-items:center;gap:14px;margin:16px; background:rgba(255,255,255,.92);border:1px solid rgba(13,35,68,.12);border-radius:20px;padding:14px 18px;box-shadow:0 14px 30px rgba(16,24,39,.08)}
+.kwa-brand-banner img,.kwa-mini-brand img{width:72px;height:72px;object-fit:contain;border-radius:16px;background:#fff}
+.kwa-brand-banner strong,.kwa-mini-brand strong{display:block;font-size:1.15rem;color:#0d2344}
+.kwa-brand-banner span,.kwa-mini-brand span{display:block;font-size:.86rem;color:#6b7280;letter-spacing:.04em}
+.kwa-brand-banner--dark{background:rgba(16,26,45,.9);border-color:rgba(255,255,255,.12)}
+.kwa-brand-banner--dark strong{color:#f1d48a}.kwa-brand-banner--dark span{color:#cfd7e8}

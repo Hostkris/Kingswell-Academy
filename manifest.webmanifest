@@ -1,0 +1,21 @@
+{
+  "name": "Kingswell Academy",
+  "short_name": "Kingswell",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#fffaf0",
+  "theme_color": "#101820",
+  "description": "Premium Kingswell Academy online school portal for GitHub Pages.",
+  "icons": [
+    {
+      "src": "assets/branding/kingswell-academy-logo-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/branding/kingswell-academy-logo-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

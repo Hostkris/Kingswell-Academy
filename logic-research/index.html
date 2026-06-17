@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kingswell Academy | Logic + Research</title>
+  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="../shared/kwa-video-classroom.css" />
+  <meta property="og:image" content="../assets/branding/kingswell-academy-banner.png" />
+  <link rel="apple-touch-icon" href="../assets/branding/kingswell-academy-logo-512.png" />
+  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml" />
+  <link rel="shortcut icon" href="../assets/branding/kingswell-academy-logo-512.png" type="image/png" />
+</head>
+<body>
+  <div class="kwa-brand-banner"><img src="../assets/branding/kingswell-academy-logo-512.png" alt="Kingswell Academy crest" /><div><strong>Kingswell Academy</strong><span>Knowledge Crowned by Character</span></div></div>
+  <a class="kwa-return-link" href="../index.html">← Back to Kingswell Academy</a>
+  <header class="site-header">
+    <div>
+      <p class="eyebrow">Kingswell Academy Curriculum</p>
+      <h1>Logic + Research</h1>
+      <p class="subtitle">Basic, Intermediate, and Advanced training in reasoning, research, evidence, argument, decision-making, and formal logic.</p>
+    </div>
+    <div class="student-card">
+      <label for="studentName">Student</label>
+      <input id="studentName" type="text" placeholder="Enter student name" />
+      <button id="saveStudentBtn">Save</button>
+    </div>
+  </header>
+
+  <main class="layout">
+    <aside class="sidebar">
+      <section class="panel">
+        <h2>Level</h2>
+        <div class="level-buttons" id="levelButtons"></div>
+      </section>
+
+      <section class="panel">
+        <h2>Classroom</h2>
+        <div id="unitList" class="unit-list"></div>
+      </section>
+
+      <section class="panel">
+        <h2>Progress</h2>
+        <div id="progressBox" class="progress-box"></div>
+      </section>
+    </aside>
+
+    <section class="content">
+      <nav class="tabs">
+        <button class="tab active" data-tab="lesson">Lesson</button>
+        <button class="tab" data-tab="homework">Homework</button>
+        <button class="tab" data-tab="quiz">Quiz</button>
+        <button class="tab" data-tab="final">Final Test</button>
+        <button class="tab" data-tab="rubric">Rubric</button>
+      </nav>
+
+      <section id="lessonView" class="view active"></section>
+      <section id="homeworkView" class="view"></section>
+      <section id="quizView" class="view"></section>
+      <section id="finalView" class="view"></section>
+      <section id="rubricView" class="view"></section>
+    </section>
+  </main>
+
+  <template id="questionTemplate">
+    <article class="question-card">
+      <div class="question-header">
+        <span class="skill-pill"></span>
+        <span class="points"></span>
+      </div>
+      <h3 class="prompt"></h3>
+      <div class="options"></div>
+      <textarea class="written-answer" placeholder="Write your answer here..."></textarea>
+      <div class="question-feedback"></div>
+    </article>
+  </template>
+
+  <script src="../shared/kwa-youtube-classrooms.js"></script>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

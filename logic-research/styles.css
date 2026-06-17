@@ -1,0 +1,365 @@
+:root {
+  --bg: #f6f1e7;
+  --surface: #fffaf0;
+  --ink: #1e1a14;
+  --muted: #655b4c;
+  --border: #d7c7a3;
+  --gold: #b8892f;
+  --navy: #111f33;
+  --green: #173b2f;
+  --danger: #8e2c23;
+  --success: #2f6b44;
+  --shadow: 0 18px 45px rgba(17, 31, 51, 0.12);
+  --radius: 18px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  background:
+    radial-gradient(circle at top left, rgba(184,137,47,.15), transparent 32rem),
+    linear-gradient(180deg, #f9f4ea, var(--bg));
+  color: var(--ink);
+}
+
+button, input, textarea {
+  font: inherit;
+}
+
+.site-header {
+  display: grid;
+  grid-template-columns: 1fr minmax(260px, 360px);
+  gap: 1rem;
+  align-items: end;
+  padding: 2rem;
+  background: var(--navy);
+  color: white;
+  border-bottom: 5px solid var(--gold);
+}
+
+.eyebrow {
+  margin: 0 0 .35rem;
+  color: #f0d899;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  font-size: .78rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 4.2rem);
+  line-height: .95;
+}
+
+.subtitle {
+  max-width: 900px;
+  color: #efe8d8;
+  font-size: 1.05rem;
+}
+
+.student-card {
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.18);
+  border-radius: var(--radius);
+  padding: 1rem;
+}
+
+.student-card label {
+  display: block;
+  margin-bottom: .35rem;
+  color: #f0d899;
+}
+
+input, textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: .75rem;
+  background: #fff;
+}
+
+.student-card input {
+  margin-bottom: .75rem;
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+  border-radius: 999px;
+  padding: .72rem 1rem;
+  background: var(--green);
+  color: white;
+  font-weight: 700;
+}
+
+button:hover { filter: brightness(1.05); }
+
+.layout {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 1.2rem;
+  padding: 1.2rem;
+  max-width: 1500px;
+  margin: auto;
+}
+
+.sidebar, .content {
+  min-width: 0;
+}
+
+.panel, .view {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.panel {
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.panel h2 {
+  margin-top: 0;
+  font-size: 1.1rem;
+}
+
+.level-buttons {
+  display: grid;
+  gap: .6rem;
+}
+
+.level-buttons button {
+  background: #fff;
+  color: var(--navy);
+  border: 1px solid var(--border);
+  text-align: left;
+}
+
+.level-buttons button.active {
+  background: var(--navy);
+  color: white;
+}
+
+.unit-list {
+  display: grid;
+  gap: .6rem;
+}
+
+.unit-btn {
+  width: 100%;
+  background: #fff;
+  color: var(--ink);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  text-align: left;
+}
+
+.unit-btn.active {
+  background: var(--green);
+  color: white;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  margin-bottom: 1rem;
+}
+
+.tab {
+  background: #fff;
+  color: var(--navy);
+  border: 1px solid var(--border);
+}
+
+.tab.active {
+  background: var(--gold);
+  color: white;
+}
+
+.view {
+  display: none;
+  padding: 1.25rem;
+}
+
+.view.active {
+  display: block;
+}
+
+.lesson-title {
+  margin-top: 0;
+  font-size: 2rem;
+}
+
+.meta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap: .8rem;
+  margin: 1rem 0;
+}
+
+.meta-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1rem;
+}
+
+.meta-card h4 {
+  margin: 0 0 .5rem;
+  color: var(--green);
+}
+
+.reading-box, .example-box, .assignment-box, .result-box {
+  background: #fff;
+  border-left: 5px solid var(--gold);
+  border-radius: 12px;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+.question-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+.question-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.skill-pill {
+  display: inline-block;
+  background: #efe4c9;
+  color: var(--green);
+  padding: .28rem .65rem;
+  border-radius: 999px;
+  font-size: .8rem;
+  font-weight: 700;
+}
+
+.points {
+  color: var(--muted);
+}
+
+.options {
+  display: grid;
+  gap: .6rem;
+}
+
+.option-btn {
+  width: 100%;
+  background: #fffaf0;
+  color: var(--ink);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  text-align: left;
+  padding: .85rem 1rem;
+}
+
+.option-btn.selected {
+  background: var(--navy);
+  color: white;
+}
+
+.option-btn.correct {
+  background: var(--success);
+  color: white;
+}
+
+.option-btn.incorrect {
+  background: var(--danger);
+  color: white;
+}
+
+.written-answer {
+  min-height: 120px;
+  display: none;
+  margin-top: .8rem;
+}
+
+.question-feedback {
+  display: none;
+  margin-top: .8rem;
+  padding: .8rem;
+  border-radius: 12px;
+  background: #f1ead8;
+}
+
+.question-feedback.show {
+  display: block;
+}
+
+.action-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem;
+  margin: 1rem 0;
+}
+
+.secondary {
+  background: #fff;
+  color: var(--navy);
+  border: 1px solid var(--border);
+}
+
+.progress-meter {
+  height: 12px;
+  background: #e5d6b6;
+  border-radius: 999px;
+  overflow: hidden;
+  margin: .5rem 0;
+}
+
+.progress-meter span {
+  display: block;
+  height: 100%;
+  background: var(--gold);
+  width: 0%;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+th, td {
+  border: 1px solid var(--border);
+  padding: .75rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  background: #efe4c9;
+}
+
+@media (max-width: 900px) {
+  .site-header,
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* Kingswell shared branding add-on */
+.kwa-return-link{display:inline-flex;align-items:center;gap:.4rem;margin:14px 16px 0;color:#0d2344;text-decoration:none;font-weight:800;background:rgba(255,255,255,.86);border:1px solid rgba(13,35,68,.12);padding:.65rem .95rem;border-radius:999px;box-shadow:0 8px 20px rgba(16,24,39,.08)}
+.kwa-return-link:hover{transform:translateY(-1px)}
+.kwa-brand-banner,.kwa-mini-brand{display:flex;align-items:center;gap:14px;margin:16px; background:rgba(255,255,255,.92);border:1px solid rgba(13,35,68,.12);border-radius:20px;padding:14px 18px;box-shadow:0 14px 30px rgba(16,24,39,.08)}
+.kwa-brand-banner img,.kwa-mini-brand img{width:72px;height:72px;object-fit:contain;border-radius:16px;background:#fff}
+.kwa-brand-banner strong,.kwa-mini-brand strong{display:block;font-size:1.15rem;color:#0d2344}
+.kwa-brand-banner span,.kwa-mini-brand span{display:block;font-size:.86rem;color:#6b7280;letter-spacing:.04em}
+.kwa-brand-banner--dark{background:rgba(16,26,45,.9);border-color:rgba(255,255,255,.12)}
+.kwa-brand-banner--dark strong{color:#f1d48a}.kwa-brand-banner--dark span{color:#cfd7e8}

@@ -1,0 +1,34 @@
+Kingswell Academy Final Complete Integrated Site
+
+Integrated modules:
+- Main Kingswell Academy portal at the root.
+- Reading + Writing module in reading-writing/.
+- Math + Algebra module in math-algebra/.
+- Science + Biology + Chemistry module in science-biology-chemistry/.
+
+Integration method:
+- The root portal owns the main navigation, campus, original tests, homework library, tutor, sources, portfolio, and PWA shell.
+- Each standalone curriculum app stays in its own folder and is mounted through an iframe from the root portal.
+- This avoids JavaScript/global variable conflicts while keeping the uploaded files intact and working.
+- Each module can also be opened directly through its own index.html.
+
+GitHub Pages:
+- Upload the contents of this folder to the repository root.
+- Keep all subfolders intact.
+- Enable Settings -> Pages -> Deploy from branch -> main -> root.
+
+
+Additional integrated modules:
+- Logic + Research module in logic-research/.
+- Psychology module in psychology/.
+
+Current integration method:
+- The root portal owns the main navigation, campus, original tests, homework library, tutor, sources, portfolio, and PWA shell.
+- Each standalone curriculum app stays in its own folder and is mounted through an iframe from the root portal.
+- This avoids JavaScript/global variable conflicts while keeping the uploaded files intact and working.
+- Each module can also be opened directly through its own index.html.
+
+Branding applied on 2026-06-16:
+- Replaced root logo, banner, favicon, and app icons with the uploaded official Kingswell Academy crest assets.
+- Added branded back-to-hub links and crest callouts across curriculum modules.
+- Updated manifest icons to use the uploaded brand assets.

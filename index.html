@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#101820" />
+  <meta name="description" content="Kingswell Academy is a practical online school for adults and self-learners rebuilding academic foundations through an 18-month roadmap, tracking, projects, and portfolio proof." />
+  <meta property="og:title" content="Kingswell Academy" />
+  <meta property="og:description" content="A practical online school for adults and self-learners with short daily lessons, syllabus calendars, tracking, study timers, portfolio notes, and applied projects." />
+  <meta property="og:image" content="assets/branding/kingswell-academy-banner.png" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="apple-touch-icon" href="assets/branding/kingswell-academy-logo-512.png" />
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
+  <link rel="shortcut icon" href="assets/branding/kingswell-academy-logo-512.png" type="image/png" />
+ <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="shared/kwa-ui-fix.css">
+  <link rel="stylesheet" href="shared/kwa-video-classroom.css">
+  <title>Kingswell Academy — Premium Online School</title>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="topbar">
+    <button class="brand" type="button" data-jump="dashboard" aria-label="Go to dashboard">
+      <img src="assets/branding/kingswell-academy-logo-512.png" alt="Kingswell Academy crest" />
+      <span><small>Knowledge Crowned by Character</small><strong>Kingswell Academy</strong></span>
+    </button>
+    <div class="top-actions">
+      <div id="globalLevelPills" class="level-pills" aria-label="Global level selector"></div>
+      <button id="installButton" class="install hidden" type="button">Install App</button>
+    </div>
+  </header>
+
+  <nav class="tabs" aria-label="Main navigation">
+    <button class="tab active" data-view="dashboard" type="button">Dashboard</button>
+    <button class="tab" data-view="about" type="button">About</button>
+    <button class="tab" data-view="calendar" type="button">Syllabus</button>
+    <button class="tab" data-view="campus" type="button">Campus</button>
+    <button class="tab" data-view="readingWriting" type="button">Reading + Writing</button>
+    <button class="tab" data-view="mathAlgebra" type="button">Math + Algebra</button>
+    <button class="tab" data-view="scienceBioChem" type="button">Science + Bio + Chem</button>
+    <button class="tab" data-view="logicResearch" type="button">Logic + Research</button>
+    <button class="tab" data-view="psychology" type="button">Psychology</button>
+    <button class="tab" data-view="businessMarketing" type="button">Business + Marketing</button>
+    <button class="tab" data-view="architectureDrafting" type="button">Architecture + Drafting</button>
+    <button class="tab" data-view="classroom" type="button">Classroom</button>
+    <button class="tab" data-view="tests" type="button">Mastery Tests</button>
+    <button class="tab" data-view="homework" type="button">Homework Library</button>
+    <button class="tab" data-view="tutor" type="button">Tutor</button>
+    <button class="tab" data-view="portfolio" type="button">Portfolio</button>
+    <button class="tab" data-view="sources" type="button">Sources</button>
+    <button class="tab" data-view="install" type="button">Install</button>
+  </nav>
+
+  <main id="main" class="shell">
+    <section id="dashboard" class="view active-view" aria-labelledby="dashboardTitle">
+      <div class="banner card"><img src="assets/branding/kingswell-academy-banner.png" alt="Kingswell Academy full crest banner" /></div>
+      <div class="hero card">
+        <div>
+          <p class="eyebrow">Premium integrated online school</p>
+          <h1 id="dashboardTitle">One campus. Videos, homework, tests, tutor, portfolio, and proof.</h1>
+          <p class="lede">This build blends the formal Kingswell crest, the 18-month syllabus calendar, the classroom campus, and the mastery-test system into one clean GitHub Pages website.</p>
+          <div class="hero-actions">
+            <button class="primary" data-jump="campus" type="button">Enter Classroom Campus</button>
+            <button class="secondary" data-jump="about" type="button">About the Academy</button>
+            <button class="secondary" data-jump="classroom" type="button">Open Current Classroom</button>
+            <button class="secondary" data-jump="tests" type="button">Start Mastery Test</button>
+            <button class="secondary" data-jump="readingWriting" type="button">Open Reading + Writing</button>
+            <button class="secondary" data-jump="mathAlgebra" type="button">Open Math + Algebra</button>
+            <button class="secondary" data-jump="scienceBioChem" type="button">Open Science + Bio + Chem</button>
+            <button class="secondary" data-jump="logicResearch" type="button">Open Logic + Research</button>
+            <button class="secondary" data-jump="psychology" type="button">Open Psychology</button>
+            <button class="secondary" data-jump="businessMarketing" type="button">Open Business + Marketing</button>
+            <button class="secondary" data-jump="architectureDrafting" type="button">Open Architecture + Drafting</button>
+          </div>
+        </div>
+        <div class="stats" id="dashboardStats"></div>
+      </div>
+      <div class="grid two">
+        <article class="card" id="todayCard"></article>
+        <article class="card">
+          <h2>Daily Formula</h2>
+          <ol class="steps">
+            <li>Read one focused lesson note.</li>
+            <li>Open the assigned course video playlist.</li>
+            <li>Answer the video classwork questions.</li>
+            <li>Complete online or printable homework.</li>
+            <li>Pass the quest checks and three mastery tests.</li>
+            <li>Save portfolio proof.</li>
+          </ol>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="view" aria-labelledby="aboutTitle">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">About Kingswell Academy</p>
+          <h2 id="aboutTitle">Practical learning without burnout.</h2>
+          <p>Kingswell Academy gives adults and self-learners a structured path for rebuilding academic confidence and gaining usable knowledge.</p>
+        </div>
+      </div>
+      <article class="card about-feature">
+        <p class="eyebrow">School mission</p>
+        <h2>Kingswell Academy is a practical online school for adults and self-learners.</h2>
+        <p class="lede">Kingswell Academy is a practical online school for adults and self-learners who want to rebuild their academic foundation, improve comprehension, and gain real-world knowledge through a structured 18-month learning roadmap. The platform combines short daily lessons, syllabus calendars, course tracking, study timers, portfolio notes, and applied projects to help users become more skilled, confident, and well-rounded without burnout.</p>
+        <p class="creator-note"><strong>Creator's note:</strong> I am the creator of this academy, Kistidis Cardy.</p>
+      </article>
+      <div class="grid two about-grid">
+        <article class="card">
+          <h3>What learners build</h3>
+          <ul class="about-list">
+            <li>Stronger reading, writing, math, science, research, psychology, business, and design foundations.</li>
+            <li>Daily study habits supported by calendars, timers, tracking, and saved notes.</li>
+            <li>Portfolio proof through applied projects, corrections, reflections, and mastery evidence.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>How the academy works</h3>
+          <ul class="about-list">
+            <li>Follow an 18-month roadmap with Basic, Intermediate, and Advanced learning levels.</li>
+            <li>Use short lessons and practice routines to keep progress steady and manageable.</li>
+            <li>Connect school skills to real-world decisions, projects, communication, and confidence.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="calendar" class="view" aria-labelledby="calendarTitle">
+      <div class="section-head">
+        <div><p class="eyebrow">18-month academic roadmap</p><h2 id="calendarTitle">Syllabus Calendar</h2><p>Every month has a classroom, integrated-looking video access, internal homework, classwork questions, quest checks, and mastery tests.</p></div>
+        <a class="secondary link-button" href="assets/docs/Kingswell_Academy_Syllabus_Calendar.png" download>Download Calendar Image</a>
+      </div>
+      <div id="monthGrid" class="month-grid"></div>
+    </section>
+
+    <section id="campus" class="view" aria-labelledby="campusTitle">
+      <div class="section-head">
+        <div><p class="eyebrow">Placement-controlled campus</p><h2 id="campusTitle">Classroom Campus</h2><p>Basic, Intermediate, and Advanced do not just change a label. The selector changes classroom routing, homework, quests, classwork, tests, and tutor context.</p></div>
+        <div class="stack-actions"><a class="secondary link-button" href="assets/docs/Kingswell_Academy_Classroom_Workbook.html" target="_blank" rel="noopener">Open Workbook</a><button class="secondary" type="button" onclick="window.print()">Print Page</button></div>
+      </div>
+      <div id="campusGrid" class="campus-grid"></div>
+    </section>
+
+
+
+    <section id="readingWriting" class="view" aria-labelledby="readingWritingTitle">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Integrated curriculum app</p>
+          <h2 id="readingWritingTitle">Reading + Writing Curriculum</h2>
+          <p>The standalone Reading + Writing system is mounted inside the Kingswell campus so its dashboard, classrooms, lessons, homework, placement test, 40-question tests, answer explanations, rubrics, and progress tracking stay intact.</p>
+        </div>
+        <div class="stack-actions">
+          <a class="secondary link-button" href="reading-writing/index.html" target="_blank" rel="noopener">Open Full Page</a>
+          <button class="secondary" type="button" data-jump="campus">Back to Campus</button>
+        </div>
+      </div>
+      <article class="card integrated-app-card">
+        <iframe class="integrated-app-frame" src="reading-writing/index.html" title="Reading + Writing Curriculum Platform" loading="lazy"></iframe>
+      </article>
+    </section>
+
+
+
+    <section id="mathAlgebra" class="view" aria-labelledby="mathAlgebraTitle">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Integrated curriculum app</p>
+          <h2 id="mathAlgebraTitle">Math + Algebra Curriculum</h2>
+          <p>The standalone Math + Algebra system is mounted inside the Kingswell campus so its Basic, Intermediate, Advanced, and Advanced Honors pathways, 40-question placement test, lessons, homework grading, quizzes, answer explanations, teacher-style feedback, weak-skill tracking, mastered-skill tracking, and local progress storage stay intact.</p>
+        </div>
+        <div class="stack-actions">
+          <a class="secondary link-button" href="math-algebra/index.html" target="_blank" rel="noopener">Open Full Page</a>
+          <button class="secondary" type="button" data-jump="campus">Back to Campus</button>
+        </div>
+      </div>
+      <article class="card integrated-app-card">
+        <iframe class="integrated-app-frame" src="math-algebra/index.html" title="Math + Algebra Curriculum Platform" loading="lazy"></iframe>
+      </article>
+    </section>
+
+    <section id="scienceBioChem" class="view" aria-labelledby="scienceBioChemTitle">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Integrated curriculum app</p>
+          <h2 id="scienceBioChemTitle">Science + Biology + Chemistry Curriculum</h2>
+          <p>The standalone Science + Biology + Chemistry module is mounted inside the Kingswell campus so its Basic, Intermediate, and Advanced levels, original lessons, homework rubrics, five-question lesson quizzes, 40-question mastery tests, scoring, explanations, review tags, progress tracking, and progress export stay intact.</p>
+        </div>
+        <div class="stack-actions">
+          <a class="secondary link-button" href="science-biology-chemistry/index.html" target="_blank" rel="noopener">Open Full Page</a>
+          <button class="secondary" type="button" data-jump="campus">Back to Campus</button>
+        </div>
+      </div>
+      <article class="card integrated-app-card">
+        <iframe class="integrated-app-frame" src="science-biology-chemistry/index.html" title="Science Biology Chemistry Curriculum Platform" loading="lazy"></iframe>
+      </article>
+    </section>
+
+
+
+    <section id="logicResearch" class="view" aria-labelledby="logicResearchTitle">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Integrated curriculum app</p>
+          <h2 id="logicResearchTitle">Logic + Research Curriculum</h2>
+          <p>The standalone Logic + Research platform is mounted inside the Kingswell campus so its Basic, Intermediate, and Advanced reasoning, research, evidence, argument, decision-making, formal logic, homework, quizzes, 40-question final tests, rubrics, auto-grading, explanations, skill scoring, and local progress tracking stay intact.</p>
+        </div>
+        <div class="stack-actions">
+          <a class="secondary link-button" href="logic-research/index.html" target="_blank" rel="noopener">Open Full Page</a>
+          <button class="secondary" type="button" data-jump="campus">Back to Campus</button>
+        </div>
+      </div>
+      <article class="card integrated-app-card">
+        <iframe class="integrated-app-frame" src="logic-research/index.html" title="Logic and Research Curriculum Platform" loading="lazy"></iframe>
+      </article>
+    </section>
+
+    <section id="psychology" class="view" aria-labelledby="psychologyTitle">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Integrated curriculum app</p>
+          <h2 id="psychologyTitle">Psychology Curriculum</h2>
+          <p>The standalone Psychology curriculum pack is mounted inside the Kingswell campus so its Basic, Intermediate, and Advanced psychology tracks, original lessons, homework worksheets, rubrics, lesson quizzes, 40-question final tests, scoring, answer explanations, review recommendations, completion tracking, certificates, and local browser progress stay intact.</p>
+        </div>
+        <div class="stack-actions">
+          <a class="secondary link-button" href="psychology/index.html" target="_blank" rel="noopener">Open Full Page</a>
+          <button class="secondary" type="button" data-jump="campus">Back to Campus</button>
+        </div>
+      </div>
+      <article class="card integrated-app-card integrated-app-card--dark">
+        <iframe class="integrated-app-frame" src="psychology/index.html" title="Psychology Curriculum Platform" loading="lazy"></iframe>
+      </article>
+    </section>
+
+
+
+    <section id="businessMarketing" class="view" aria-labelledby="businessMarketingTitle">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Integrated curriculum app</p>
+          <h2 id="businessMarketingTitle">Business + Marketing Curriculum</h2>
+          <p>The standalone Business + Marketing platform is mounted inside the Kingswell campus so its Basic, Intermediate, and Advanced levels, 24 written lessons, objectives, vocabulary, examples, practice drills, homework, rubrics, quizzes, 40-question final exams, scoring, answer explanations, source-book connections, and local progress tracking stay intact.</p>
+        </div>
+        <div class="stack-actions">
+          <a class="secondary link-button" href="business-marketing/index.html" target="_blank" rel="noopener">Open Full Page</a>
+          <button class="secondary" type="button" data-jump="campus">Back to Campus</button>
+        </div>
+      </div>
+      <article class="card integrated-app-card integrated-app-card--dark">
+        <iframe class="integrated-app-frame" src="business-marketing/index.html" title="Business and Marketing Curriculum Platform" loading="lazy"></iframe>
+      </article>
+    </section>
+
+    <section id="architectureDrafting" class="view" aria-labelledby="architectureDraftingTitle">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Integrated curriculum app</p>
+          <h2 id="architectureDraftingTitle">Architecture + Drafting Curriculum</h2>
+          <p>The standalone Architecture + Drafting module is mounted inside the Kingswell campus so its Basic, Intermediate, and Advanced levels, 12 classes per level, lesson summaries, objectives, vocabulary, homework and studio assignments, rubrics, class quizzes, 40-question level tests, scoring, answer explanations, remediation messages, certificate unlock logic, and local progress tracking stay intact.</p>
+        </div>
+        <div class="stack-actions">
+          <a class="secondary link-button" href="architecture-drafting/index.html" target="_blank" rel="noopener">Open Full Page</a>
+          <button class="secondary" type="button" data-jump="campus">Back to Campus</button>
+        </div>
+      </div>
+      <article class="card integrated-app-card">
+        <iframe class="integrated-app-frame" src="architecture-drafting/index.html" title="Architecture and Drafting Curriculum Platform" loading="lazy"></iframe>
+      </article>
+    </section>
+
+    <section id="classroom" class="view" aria-labelledby="classroomTitle">
+      <div class="section-head">
+        <div><p class="eyebrow">Lesson portal</p><h2 id="classroomTitle">Active Classroom</h2><p>Videos now open through polished internal-looking classroom cards that link directly to YouTube. Homework can be done online, printed, or downloaded. Tests scramble after failed attempts.</p></div>
+        <div class="filters"><select id="coursePicker" aria-label="Choose course"></select></div>
+      </div>
+      <div id="classroomPanel"></div>
+    </section>
+
+    <section id="tests" class="view" aria-labelledby="testsTitle">
+      <div class="section-head">
+        <div><p class="eyebrow">A/B/C/D mastery engine</p><h2 id="testsTitle">Mastery Tests</h2><p>Three separate tests per course. Every test is regenerated and answer choices are shuffled on retake.</p></div>
+        <div class="filters"><select id="testCoursePicker" aria-label="Choose test course"></select><select id="testNumberPicker" aria-label="Choose test number"><option value="1">Test 1</option><option value="2">Test 2</option><option value="3">Test 3</option></select></div>
+      </div>
+      <div id="testPanel" class="card test-panel"></div>
+    </section>
+
+    <section id="homework" class="view" aria-labelledby="homeworkTitle">
+      <div class="section-head"><div><p class="eyebrow">Online and offline work</p><h2 id="homeworkTitle">Homework Library</h2><p>Every course has downloadable printable homework for Basic, Intermediate, and Advanced. No empty folder nonsense — GitHub hates those like a stern librarian.</p></div><button class="secondary" type="button" data-jump="classroom">Open Active Worksheet</button></div>
+      <div id="homeworkGrid" class="homework-grid"></div>
+    </section>
+
+    <section id="tutor" class="view" aria-labelledby="tutorTitle">
+      <div class="section-head"><div><p class="eyebrow">Lite academic tutor</p><h2 id="tutorTitle">Ask Kingswell Tutor</h2><p>The tutor searches approved lesson notes, objectives, vocabulary, worksheets, and practice questions inside this build.</p></div></div>
+      <div class="grid two">
+        <article class="card">
+          <label for="tutorQuestion">Ask a question</label>
+          <textarea id="tutorQuestion" placeholder="Example: Explain slope. Give me practice for psychology. What should I write for business homework?"></textarea>
+          <div class="hero-actions"><button id="askTutor" class="primary" type="button">Ask Tutor</button><button id="clearTutor" class="secondary" type="button">Clear</button></div>
+        </article>
+        <article class="card tutor-answer" id="tutorAnswer"><h3>Tutor answer</h3><p>Ask about a course, vocabulary word, homework task, or test topic.</p></article>
+      </div>
+    </section>
+
+    <section id="portfolio" class="view" aria-labelledby="portfolioTitle">
+      <div class="section-head"><div><p class="eyebrow">Evidence binder</p><h2 id="portfolioTitle">Portfolio Proof</h2><p>Save notes, corrections, homework summaries, and project proof. This stays in the browser through local storage.</p></div><button id="exportPortfolio" class="secondary" type="button">Export Portfolio</button></div>
+      <div class="grid two"><article class="card"><label for="portfolioNote">New proof note</label><textarea id="portfolioNote" placeholder="Write what you learned, what you practiced, what you got wrong, and how you corrected it."></textarea><button id="savePortfolio" class="primary" type="button">Save Proof</button></article><article class="card"><h3>Saved Proof</h3><div id="portfolioList"></div></article></div>
+    </section>
+
+    <section id="sources" class="view" aria-labelledby="sourcesTitle">
+      <div class="section-head"><div><p class="eyebrow">Source library</p><h2 id="sourcesTitle">Approved Sources & Legal Use</h2><p>External videos and learning libraries are linked legally. The internal homework, tests, classwork, worksheets, and tutor notes are original to this build.</p></div><a class="secondary link-button" href="SOURCES.md" target="_blank" rel="noopener">Open Source File</a></div>
+      <div id="sourceGrid" class="source-grid"></div>
+    </section>
+
+    <section id="install" class="view" aria-labelledby="installTitle">
+      <div class="section-head"><div><p class="eyebrow">GitHub Pages ready</p><h2 id="installTitle">Install & Deployment</h2></div></div>
+      <div class="grid two">
+        <article class="card"><h3>GitHub upload</h3><ol class="steps"><li>Upload the contents of this folder to the repository root.</li><li>Keep <code>index.html</code>, <code>styles.css</code>, <code>data.js</code>, <code>app.js</code>, <code>manifest.webmanifest</code>, <code>service-worker.js</code>, and <code>assets/</code> at the root.</li><li>Go to Settings → Pages → Deploy from branch → main → root.</li><li>Open the GitHub Pages link after it publishes.</li></ol></article>
+        <article class="card"><h3>Production note</h3><p>This is a strong static front-end school portal. For real enrolled students, payments, secure accounts, teacher dashboards, anti-cheat grading, certificates, and cloud progress sync need a backend.</p><p class="notice">GitHub Pages can host the school interface. It cannot securely hold private student records by itself.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Kingswell Academy • Knowledge Crowned by Character • Structured learning, playable practice, mastery testing, and portfolio proof.</p>
+    <p class="creator-credit"><strong>Acknowledgment:</strong> Created by Kistidis Cardy.</p>
+  </footer>
+  <script src="shared/kwa-youtube-classrooms.js"></script>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
